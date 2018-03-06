@@ -12,8 +12,11 @@ for sublist in myList[1:]:
 
     if 'men' in sublist[3].lower():
         row_genders = 'Men'
-    if 'women' in sublist[3].lower():
-        row_genders = 'Women'
+    else:
+        if 'women' in sublist[3].lower():
+            row_genders = 'Women'
+        else:
+            row_genders = 'All'
     if 'children' in sublist[3].lower():
         row_ages.append('Children')
     if 'young adults' in sublist[3].lower():

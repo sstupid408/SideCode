@@ -17,13 +17,17 @@ for sublist in myList[1:]:
             row_genders = 'Men'
         else:
             row_genders = 'All'
-    if 'children' in sublist[3].lower():
-        row_ages.append('Children')
+
     if 'young adults' in sublist[3].lower():
         row_ages.append('Young adults')
-    if 'families w/ newborns' or 'families w/ children' in sublist[3].lower():
-        row_ages.append('Families w/ newborns')
+    if 'families' in sublist[3].lower():
+        row_ages.append('Families')
+    else:
+        if 'children' in sublist[3].lower():
+            row_ages.append('Children')
     if 'anyone' in sublist[3].lower():
+        row_ages.append('Anyone')
+    if not ('young adults' in sublist[3].lower() or 'families' in sublist[3].lower() or 'children' in sublist[3].lower()):
         row_ages.append('Anyone')
 
     data = {"name": sublist[1],

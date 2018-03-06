@@ -18,7 +18,7 @@ for sublist in myList[1:]:
         row_ages.append('Children')
     if 'young adults' in sublist[3].lower():
         row_ages.append('Young adults')
-    if 'families w/ newborns' in sublist[3].lower():
+    if 'families w/ newborns' or 'families w/ children' in sublist[3].lower():
         row_ages.append('Families w/ newborns')
     if 'anyone' in sublist[3].lower():
         row_ages.append('Anyone')

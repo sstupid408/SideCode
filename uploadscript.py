@@ -32,6 +32,7 @@ for sublist in myList[1:]:
 
     data = {"name": sublist[1],
             "capacity": sublist[2],
+            "currentCapacity": sublist[2],
             "restrictions": sublist[3],
             "longitude": sublist[4],
             "latitude": sublist[5],

@@ -41,4 +41,4 @@ for sublist in myList[1:]:
             "phoneNumber": sublist[8],
             "gender": row_genders,
             "ageRange": row_ages}
-    firebase.patch("/Shelters/Shelter_Number_%02d" % (int(sublist[0]),), data)
+    firebase.patch("/Shelters/" + sublist[1], data)
